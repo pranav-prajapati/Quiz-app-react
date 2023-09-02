@@ -4,6 +4,7 @@ import _ from "lodash";
 export default function Report(props) {
   return (
     <div>
+      <h1>Quiz Report</h1>
       <table style={{ width: "100%" }}>
         <tr>
           <th style={{ width: "10%" }}>No.</th>

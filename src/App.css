@@ -5,3 +5,18 @@
 table, th, td {
   border:1px solid black;
 }
+
+.currentVisited{
+  background-color: skyblue;
+  color: black;
+}
+
+.previouslyVisited{
+  background-color: rgb(241, 65, 65);
+  color: black;
+}
+
+.attempted{
+  background-color: green;
+  color: white;
+}

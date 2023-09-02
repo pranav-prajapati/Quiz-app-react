@@ -5,6 +5,23 @@ import { update } from "lodash";
 const initialState = {
   email: "",
   questions: [],
+  visited_questions: {
+    1: true,
+    2: "",
+    3: "",
+    4: "",
+    5: "",
+    6: "",
+    7: "",
+    8: "",
+    9: "",
+    10: "",
+    11: "",
+    12: "",
+    13: "",
+    14: "",
+    15: "",
+  },
   answers: {
     1: "",
     2: "",

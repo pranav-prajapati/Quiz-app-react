@@ -13,13 +13,14 @@ function Questions() {
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState("");
-  // const [checkedValue,setCheckedValue]=useState("");
+  const [currentVisted, setCurrentVisited] = useState(0);
 
   const questions = useSelector((state) => state.Quiz.questions.results);
   let answers = useSelector((state) => state.Quiz.answers);
   const loading = useSelector((state) => state.Quiz.isLoading);
   const email = useSelector((state) => state.Quiz.email);
   const testEnd = useSelector((state) => state.Quiz.testEnd);
+  const visited_questions=useSelector((state) => state.Quiz.visited_questions);
 
   const currentQuestion = _.get(questions, [currentQuestionIndex, "question"]);
 
@@ -71,9 +72,19 @@ function Questions() {
                   <>
                     <QuestionNumbers
                       number={index}
+                      currentVisited={currentVisted}
+                      attempted={!_.isEmpty(answers[index + 1])}
+                      previouslyVisited={visited_questions[index+1]!==""}
                       click={() => {
                         setCurrentQuestionIndex(index);
                         setSelectedOption(answers[index + 1]);
+                        setCurrentVisited(index);
+                        dispatch(
+                          setState({
+                            key: "visited_questions",
+                            value: { ...visited_questions, [index + 1]: true },
+                          })
+                        );
                       }}
                     />
                     &nbsp;
@@ -115,6 +126,13 @@ function Questions() {
                     onClick={() => {
                       setSelectedOption(answers[currentQuestionIndex]);
                       setCurrentQuestionIndex((prev) => prev - 1);
+                      setCurrentVisited(currentQuestionIndex - 1);
+                      dispatch(
+                        setState({
+                          key: "visited_questions",
+                          value: { ...visited_questions, [currentQuestionIndex]: true },
+                        })
+                      );
                     }}
                   >
                     Previous
@@ -128,6 +146,13 @@ function Questions() {
                     onClick={() => {
                       setSelectedOption(answers[currentQuestionIndex + 2]);
                       setCurrentQuestionIndex((prev) => prev + 1);
+                      setCurrentVisited(currentQuestionIndex + 1);
+                      dispatch(
+                        setState({
+                          key: "visited_questions",
+                          value: { ...visited_questions, [currentQuestionIndex + 2]: true },
+                        })
+                      );
                     }}
                   >
                     Next

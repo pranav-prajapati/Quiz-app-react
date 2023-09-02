@@ -20,10 +20,11 @@ function Home() {
   }
 
   return (
-    <div className="start-page">
-      <h1>Welcome to the Quiz!</h1>
+    <div className="container questionBox" style={{"marginTop":"10%"}}>
+      <h2 className="text-center mt-2">Welcome to the Quiz!</h2>
       <form>
         <input
+        className="d-grid col-6 mx-auto"
           type="email"
           placeholder="Enter your email"
           onChange={(e) => {
@@ -31,15 +32,15 @@ function Home() {
           }}
           required
         />
-        <br />
+        
         {isValidEmail(email) === false && (
           <>
-            <span style={{ color: "red", fontSize:"smaller" }}>Enter email in proper format</span>
-            <br />
+            <p className="text-center" style={{ color: "red", fontSize:"smaller" }}>Enter email in proper format</p>
           </>
         )}
         <input
           type="submit"
+          className="d-grid col-2 mx-auto btn btn-primary mt-3"
           value="Start Quiz"
           disabled={!isValidEmail(email)}
           onClick={(e) => {

@@ -4,7 +4,7 @@ export default function QuestionNumbers(props) {
   return (
     <>
       <button
-        className={
+        className={          
           props.currentVisited === props.number
             ? "currentVisited"
             : props.attempted

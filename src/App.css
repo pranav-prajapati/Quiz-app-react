@@ -20,3 +20,15 @@ table, th, td {
   background-color: green;
   color: white;
 }
+
+.questionBox{
+  background-color: rgb(241, 222, 245);
+  border: solid 2px rgb(78, 74, 74);
+  margin: 10px 0px 5px 0px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.loader{
+  align-items: center;
+}

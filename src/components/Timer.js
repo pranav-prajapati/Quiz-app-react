@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setState } from "../store/questions.slice";
+
 const Timer = () => {
   const dispatch = useDispatch();
 
@@ -22,7 +23,7 @@ const Timer = () => {
   const seconds = timeRemaining % 60;
 
   return (
-    <div className="timer">
+    <div className="d-flex justify-content-center text-danger mt-3">
       Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
     </div>
   );

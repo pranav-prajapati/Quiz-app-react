@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+### Josh Talk Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***
+Name : Pranavkumar prajapati
+Email : p.pranav2820@gmail.com
 
-## Available Scripts
+***
+### Requirements:
 
-In the project directory, you can run:
+1. **Quiz Layout & Flow**:
+● The application should have a start page where the user should submit their email address.
+● Then the application should display 15 questions to the user.
+● A timer should be displayed on the top of the page, counting down from 30 minutes. The quiz
+should auto-submit when the timer reaches zero.
 
-### `npm start`
+2. **Navigation**:
+● Users should be able to navigate to a specific question.
+● An overview panel or similar element should show all questions indicating:
+● Which questions the user has visited.
+● Which questions have been attempted.
+3. **End of Quiz**:
+● After the quiz or when the timer ends, users should be directed to a report page.
+● This report should display each question with the user's answer and the correct answer side by
+side or in a format that is easy to compare.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Components used:
+1. Report component
+2. Timer Component
+3. Question Panel 
+4. Individual Question Box
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### How to run application:
 
-### `npm test`
+to install required node modules
+```npm install```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+to run the application
+```npm run start```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Challenges faced
+- End test after 30 minutes and generate the report
+- display question statuses like visited,attempted
+***
+###### Note : All Functionalities are implemented according to given requirements

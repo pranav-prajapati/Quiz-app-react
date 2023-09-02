@@ -37,6 +37,9 @@ to install required node modules
 to run the application
 ```npm run start```
 
+### Deployment link :
+``` https://quiz-app-assessment.vercel.app/ ```
+
 ### Challenges faced
 - End test after 30 minutes and generate the report
 - display question statuses like visited,attempted

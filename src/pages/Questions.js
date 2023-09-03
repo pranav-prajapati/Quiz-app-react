@@ -196,15 +196,23 @@ function Questions() {
                   Finish Test
                 </button>
                 <br />
+                <div>
+                  <p className="text-danger">
+                    <b>Note:</b>
+                  </p>
+                  <p style={{ fontSize: "12px" }}>
+                    <b>Red box indicates Visited Questions</b>
+                  </p>
+                  <p style={{ fontSize: "12px" }}>
+                    <b>Green box indicates Attempted Questions</b>
+                  </p>
+                  <p style={{ fontSize: "12px" }}>
+                    <b>Blue box indicates Current Question</b>
+                  </p>
+                </div>
               </>
             </>
           )}
-          <div>
-            <p className="text-danger"><b>Note:</b></p>
-            <p style={{fontSize:"12px"}}><b>Red box indicates Visited Questions</b></p>
-            <p style={{fontSize:"12px"}}><b>Green box indicates Attempted Questions</b></p>
-            <p style={{fontSize:"12px"}}><b>Blue box indicates Current Question</b></p>
-          </div>
         </>
       )}
     </div>
